@@ -1,9 +1,9 @@
 const Home = () => {
   return (
-    <div>Home Page</div>
+    <div>
+      este es el home
+    </div>
   )
 }
 
 export default Home
-
-// outlet react-oute-dom
