@@ -7,7 +7,7 @@ const Root = () => {
   return (
     <div className='w-full h-full relative p-4'>
       <Header />
-      <div className='absolute top-40'>
+      <div className='mt-4'>
         <Outlet />
       </div>
       <Footer />
