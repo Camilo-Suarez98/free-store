@@ -2,7 +2,7 @@
 const Footer = () => {
   return (
     <div className="mt-16 w-full text-center">
-      <h2>
+      <h2 className="text-xl sm:text-2xl">
         Developed by
         {' '}
         <a
