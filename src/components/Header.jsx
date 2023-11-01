@@ -9,7 +9,7 @@ const Header = () => {
   }
 
   return (
-    <div className="w-full flex justify-between items-center pt-4 px-4 sm:px-24 lg:px-4">
+    <div className="w-full flex justify-between items-center pt-4 px-4 sm:px-12 lg:px-4">
       <section className="w-24">
         <a href="/">
           <img src="../../logo.png" alt="logo" />
@@ -28,7 +28,7 @@ const Header = () => {
               <li>
                 <a
                   href="/"
-                  className="flex items-center justify-center text-[#2a5fff] h-16 p-2"
+                  className="flex items-center justify-center text-[#2a5fff] h-16 p-2 text-xl"
                 >
                   Home
                 </a>
@@ -36,7 +36,7 @@ const Header = () => {
               <li>
                 <a
                   href="/characters"
-                  className="flex items-center justify-center text-[#2a5fff] h-16 p-2"
+                  className="flex items-center justify-center text-[#2a5fff] h-16 p-2 text-xl"
                 >
                   Characters
                 </a>
@@ -44,7 +44,7 @@ const Header = () => {
               <li>
                 <a
                   href="/characters"
-                  className="flex items-center justify-center text-[#2a5fff] h-16 p-2"
+                  className="flex items-center justify-center text-[#2a5fff] h-16 p-2 text-xl"
                 >
                   Episodes
                 </a>
@@ -52,7 +52,7 @@ const Header = () => {
               <li>
                 <a
                   href="/characters"
-                  className="flex items-center justify-center text-[#2a5fff] h-16 p-2"
+                  className="flex items-center justify-center text-[#2a5fff] h-16 p-2 text-xl"
                 >
                   Locations
                 </a>
@@ -66,7 +66,7 @@ const Header = () => {
           <li>
             <a
               href="/"
-              className="flex items-center justify-center text-[#2a5fff] h-16 p-2"
+              className="flex items-center justify-center text-[#2a5fff] h-16 p-2 text-xl"
             >
               Home
             </a>
@@ -74,7 +74,7 @@ const Header = () => {
           <li>
             <a
               href="/characters"
-              className="flex items-center justify-center text-[#2a5fff] h-16 p-2"
+              className="flex items-center justify-center text-[#2a5fff] h-16 p-2 text-xl"
             >
               Characters
             </a>
@@ -82,7 +82,7 @@ const Header = () => {
           <li>
             <a
               href="/characters"
-              className="flex items-center justify-center text-[#2a5fff] h-16 p-2"
+              className="flex items-center justify-center text-[#2a5fff] h-16 p-2 text-xl"
             >
               Episodes
             </a>
@@ -90,7 +90,7 @@ const Header = () => {
           <li>
             <a
               href="/characters"
-              className="flex items-center justify-center text-[#2a5fff] h-16 p-2"
+              className="flex items-center justify-center text-[#2a5fff] h-16 p-2 text-xl"
             >
               Locations
             </a>
