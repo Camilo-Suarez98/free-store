@@ -22,20 +22,29 @@ const Header = () => {
           <div className="bar bar--middle"></div>
           <div className="bar bar--bottom"></div>
         </label>
-
+        {showMenu &&
+          <section className="bg-[#292929] absolute top-24 left-0 right-0 h-screen z-50 sm:hidden">
+            <ul className="flex flex-col justify-around mt-5">
+              <li>
+                <a
+                  href="/"
+                  className="flex items-center justify-center text-[#2a5fff] h-16 p-2"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/characters"
+                  className="flex items-center justify-center text-[#2a5fff] h-16 p-2"
+                >
+                  Characters
+                </a>
+              </li>
+            </ul>
+          </section>
+        }
       </section>
-      {showMenu &&
-        <section className="absolute top-24 left-0 right-0 sm:hidden">
-          <ul className="flex flex-col justify-around">
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/characters">Characters</a>
-            </li>
-          </ul>
-        </section>
-      }
       <section className="hidden sm:block sm:w-60">
         <ul className="flex justify-around">
           <li>
