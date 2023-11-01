@@ -9,7 +9,7 @@ const Header = () => {
   }
 
   return (
-    <div className="w-full absolute top-0 left-0 right-0 flex justify-between items-center pt-4 px-4 sm:px-24 lg:px-4">
+    <div className="w-full flex justify-between items-center pt-4 px-4 sm:px-24 lg:px-4">
       <section className="w-24">
         <a href="/">
           <img src="../../logo.png" alt="logo" />
@@ -23,7 +23,7 @@ const Header = () => {
           <div className="bar bar--bottom"></div>
         </label>
         {showMenu &&
-          <section className="bg-[#292929] absolute top-24 left-0 right-0 h-screen z-50 sm:hidden">
+          <section className="bg-[#292929] absolute top-28 left-0 right-0 h-screen z-50 sm:hidden">
             <ul className="flex flex-col justify-around mt-5">
               <li>
                 <a
@@ -41,17 +41,59 @@ const Header = () => {
                   Characters
                 </a>
               </li>
+              <li>
+                <a
+                  href="/characters"
+                  className="flex items-center justify-center text-[#2a5fff] h-16 p-2"
+                >
+                  Episodes
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/characters"
+                  className="flex items-center justify-center text-[#2a5fff] h-16 p-2"
+                >
+                  Locations
+                </a>
+              </li>
             </ul>
           </section>
         }
       </section>
-      <section className="hidden sm:block sm:w-60">
+      <section className="hidden sm:block sm:w-96">
         <ul className="flex justify-around">
           <li>
-            <a href="/">Home</a>
+            <a
+              href="/"
+              className="flex items-center justify-center text-[#2a5fff] h-16 p-2"
+            >
+              Home
+            </a>
           </li>
           <li>
-            <a href="/characters">Characters</a>
+            <a
+              href="/characters"
+              className="flex items-center justify-center text-[#2a5fff] h-16 p-2"
+            >
+              Characters
+            </a>
+          </li>
+          <li>
+            <a
+              href="/characters"
+              className="flex items-center justify-center text-[#2a5fff] h-16 p-2"
+            >
+              Episodes
+            </a>
+          </li>
+          <li>
+            <a
+              href="/characters"
+              className="flex items-center justify-center text-[#2a5fff] h-16 p-2"
+            >
+              Locations
+            </a>
           </li>
         </ul>
       </section>
