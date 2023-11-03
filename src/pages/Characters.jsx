@@ -1,20 +1,21 @@
 import { useQuery, gql } from '@apollo/client'
 import { Link } from 'react-router-dom'
 
-const Characters = () => {
-  const GET_CHARACTERS = gql`
-    query {
-      characters {
-        results {
-          id
-          name
-          status
-          image
-          gender
-        }
+const GET_CHARACTERS = gql`
+  query {
+    characters {
+      results {
+        id
+        name
+        status
+        image
+        gender
       }
     }
-  `
+  }
+`
+
+const Characters = () => {
 
   const { loading, error, data } = useQuery(GET_CHARACTERS)
 

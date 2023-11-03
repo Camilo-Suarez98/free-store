@@ -1,24 +1,25 @@
 import { useQuery, gql } from "@apollo/client"
 import { useParams } from "react-router-dom"
 
-const CharacterDetails = () => {
-  const GET_CHARACTER = gql`
-    query getCharater($id: ID!) {
-      character(id: $id) {
-        id
+const GET_CHARACTER = gql`
+  query getCharater($id: ID!) {
+    character(id: $id) {
+      id
+      name
+      image
+      status
+      species
+      origin {
         name
-        image
-        status
-        species
-        origin {
-          name
-        }
-        location {
-          name
-        }
+      }
+      location {
+        name
       }
     }
-  `
+  }
+`
+
+const CharacterDetails = () => {
   const { id } = useParams()
 
   const options = {
@@ -26,9 +27,6 @@ const CharacterDetails = () => {
   }
 
   const { loading, error, data } = useQuery(GET_CHARACTER, options)
-  console.log(data);
-  console.log('data character', data.character);
-  const info = data.character
 
   if (loading) {
     return (
@@ -43,7 +41,13 @@ const CharacterDetails = () => {
 
   return (
     <div>
-      {info.name}
+      {
+        data && (
+          <div>
+            <h2>{data.character.name}</h2>
+          </div>
+        )
+      }
     </div>
   )
 }
