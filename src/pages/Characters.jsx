@@ -1,5 +1,6 @@
-import { useQuery, gql } from '@apollo/client'
-import { Link } from 'react-router-dom'
+import { useQuery, gql } from '@apollo/client';
+import { Link } from 'react-router-dom';
+import Loader from '../components/Loader';
 
 const GET_CHARACTERS = gql`
   query {
@@ -13,26 +14,18 @@ const GET_CHARACTERS = gql`
       }
     }
   }
-`
+`;
 
 const Characters = () => {
+  const { loading, error, data } = useQuery(GET_CHARACTERS);
 
-  const { loading, error, data } = useQuery(GET_CHARACTERS)
-
-  if (loading) {
-    return (
-      <div className="loader">
-        Loading
-        <span></span>
-      </div>
-    )
-  }
+  if (loading) return <Loader />;
 
   if (error) return <p>Error : {error.message}</p>;
 
   return (
     <div>
-      <h2 className='text-xl'>Click on your favorite character to view details</h2>
+      <h2 className='text-2xl'>Click on your favorite character to view details</h2>
       <div className='flex flex-wrap justify-center gap-10 mt-10'>
         {data.characters.results.map(({ id, name, status, image, gender }) => {
           return (
@@ -54,7 +47,7 @@ const Characters = () => {
         })}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Characters
+export default Characters;

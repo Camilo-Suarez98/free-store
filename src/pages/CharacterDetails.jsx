@@ -1,5 +1,6 @@
-import { useQuery, gql } from "@apollo/client"
-import { useParams } from "react-router-dom"
+import { useQuery, gql } from "@apollo/client";
+import { useParams } from "react-router-dom";
+import Loader from "../components/Loader";
 
 const GET_CHARACTER = gql`
   query getCharater($id: ID!) {
@@ -17,25 +18,18 @@ const GET_CHARACTER = gql`
       }
     }
   }
-`
+`;
 
 const CharacterDetails = () => {
-  const { id } = useParams()
+  const { id } = useParams();
 
   const options = {
     variables: { id }
-  }
+  };
 
-  const { loading, error, data } = useQuery(GET_CHARACTER, options)
+  const { loading, error, data } = useQuery(GET_CHARACTER, options);
 
-  if (loading) {
-    return (
-      <div className="loader">
-        Loading
-        <span></span>
-      </div>
-    )
-  }
+  if (loading) return <Loader />;
 
   if (error) return <p>Error : {error.message}</p>;
 
@@ -49,7 +43,7 @@ const CharacterDetails = () => {
         )
       }
     </div>
-  )
-}
+  );
+};
 
-export default CharacterDetails
+export default CharacterDetails;

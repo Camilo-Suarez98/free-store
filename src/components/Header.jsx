@@ -1,11 +1,14 @@
-import { useState } from "react"
+import { useState } from "react";
 
 const Header = () => {
-  const [showMenu, setShowMenu] = useState(false)
+  const [showMenu, setShowMenu] = useState(false);
 
   const handleShowMenu = () => {
-    if (!showMenu) setShowMenu(true)
-    else setShowMenu(false)
+    if (!showMenu) {
+      setShowMenu(true);
+    } else {
+      setShowMenu(false);
+    }
   }
 
   return (
@@ -98,7 +101,7 @@ const Header = () => {
         </ul>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

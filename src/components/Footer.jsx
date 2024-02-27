@@ -1,4 +1,3 @@
-
 const Footer = () => {
   return (
     <div className="mt-16 w-full text-center">
@@ -14,9 +13,9 @@ const Footer = () => {
           Camilo-Suarez98
         </a>
       </h2>
-      <p>© 2023</p>
+      <p>© 2024</p>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

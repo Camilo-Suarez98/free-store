@@ -1,7 +1,7 @@
-import '../App.css'
-import { Outlet } from 'react-router-dom'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import '../App.css';
+import { Outlet } from 'react-router-dom';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const Root = () => {
   return (
@@ -12,7 +12,7 @@ const Root = () => {
       </div>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Root
+export default Root;
