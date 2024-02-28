@@ -32,7 +32,7 @@ const Characters = () => {
             <Link
               to={`/character/${id}`}
               key={id}
-              className='border-2 border-[#2a52c9] text-[#2a5fff] cursor-pointer p-4 rounded-lg transition duration-500 hover:bg-[#2a5fff] hover:text-white hover:text-bold'
+              className='border-2 border-[#3c6a28] text-[#53bf23] cursor-pointer p-4 rounded-lg transition duration-500 hover:bg-[#abfa88] hover:text-white hover:text-bold'
             >
               <h2 className='text-2xl my-2 overflow-hidden text-ellipsis whitespace-nowrap'>{name}</h2>
               <h3 className={status === 'Alive' ? 'text-green-500 text-xl' : status === 'unknown' ? 'text-gray-500 text-2xl' : 'text-red-500 text-2xl'}>{status}</h3>

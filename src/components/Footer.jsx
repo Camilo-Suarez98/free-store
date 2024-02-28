@@ -1,12 +1,12 @@
 const Footer = () => {
   return (
     <div className="mt-16 w-full text-center">
-      <h2 className="text-xl sm:text-2xl">
+      <h2 className="text-xl">
         Developed by
         {' '}
         <a
           href="https://github.com/Camilo-Suarez98"
-          className="text-[#2a5fff]"
+          className="text-[#53bf23] transition duration-500 hover:text-[#abfa88]"
           target="_blank"
           rel="noreferrer"
         >
