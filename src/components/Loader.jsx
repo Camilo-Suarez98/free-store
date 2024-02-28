@@ -11,7 +11,7 @@ const Loader = () => {
         </div>
         <div className="flex-1 text-center text-white">status</div>
       </div>
-      <div className="p-2.5 text-[#0f0]">
+      <div className="p-2.5 text-[#53bf23]">
         <div>
           <span className="mr-2">Loading</span>
           <span className="animate-[ping_1.5s_0.5s_ease-in-out_infinite]">.</span>
