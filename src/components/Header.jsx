@@ -1,15 +1,19 @@
 import { useState } from "react";
+import NavLink from "./NavLink";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   const handleShowMenu = () => {
-    if (!showMenu) {
-      setShowMenu(true);
-    } else {
-      setShowMenu(false);
-    }
+    setShowMenu(!showMenu);
   }
+
+  const navLinks = [
+    { href: '/', value: 'Home' },
+    { href: "/characters", value: "Characters" },
+    { href: "/", value: "Episodes" },
+    { href: "/", value: "Location" }
+  ]
 
   return (
     <div className="w-full flex justify-between items-center pt-4 px-4 sm:px-12 lg:px-4">
@@ -25,79 +29,35 @@ const Header = () => {
           <div className="bar bar--middle"></div>
           <div className="bar bar--bottom"></div>
         </label>
+
         {showMenu &&
-          <section className="bg-[#292929] absolute top-28 left-0 right-0 h-screen z-50 sm:hidden">
+          <section
+            className='bg-[#292929] absolute top-28 left-0 right-0 h-screen z-50 sm:hidden'
+          >
             <ul className="flex flex-col justify-around mt-5">
-              <li>
-                <a
-                  href="/"
-                  className="flex items-center justify-center text-[#2a5fff] h-16 p-2 text-xl"
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/characters"
-                  className="flex items-center justify-center text-[#2a5fff] h-16 p-2 text-xl"
-                >
-                  Characters
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/characters"
-                  className="flex items-center justify-center text-[#2a5fff] h-16 p-2 text-xl"
-                >
-                  Episodes
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/characters"
-                  className="flex items-center justify-center text-[#2a5fff] h-16 p-2 text-xl"
-                >
-                  Locations
-                </a>
-              </li>
+              {navLinks.map(({ href, value }) => (
+                <NavLink
+                  key={Math.random()}
+                  href={href}
+                  value={value}
+                />
+              ))}
             </ul>
           </section>
         }
       </section>
+
+      {/* Desktop view */}
+
       <section className="hidden sm:block sm:w-96">
         <ul className="flex justify-around">
-          <li>
-            <a
-              href="/"
-              className="flex items-center justify-center text-[#2a5fff] h-16 p-2 text-xl"
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="/characters"
-              className="flex items-center justify-center text-[#2a5fff] h-16 p-2 text-xl"
-            >
-              Characters
-            </a>
-          </li>
-          <li>
-            <a
-              href="/characters"
-              className="flex items-center justify-center text-[#2a5fff] h-16 p-2 text-xl"
-            >
-              Episodes
-            </a>
-          </li>
-          <li>
-            <a
-              href="/characters"
-              className="flex items-center justify-center text-[#2a5fff] h-16 p-2 text-xl"
-            >
-              Locations
-            </a>
-          </li>
+          {navLinks.map(({ href, value }) => (
+            <NavLink
+              key={Math.random()}
+              href={href}
+              value={value}
+            />
+          ))}
         </ul>
       </section>
     </div>
