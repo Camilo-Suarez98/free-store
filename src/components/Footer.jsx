@@ -6,7 +6,7 @@ const Footer = () => {
         {' '}
         <a
           href="https://github.com/Camilo-Suarez98"
-          className="text-[#53bf23] transition duration-500 hover:text-[#abfa88]"
+          className="text-[#53bf23] transition duration-1000 hover:text-[#abfa88]"
           target="_blank"
           rel="noreferrer"
         >
