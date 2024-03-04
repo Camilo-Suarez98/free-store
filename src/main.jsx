@@ -6,7 +6,8 @@ import { RouterProvider } from 'react-router-dom';
 import router from './router/index.jsx';
 
 const client = new ApolloClient({
-  uri: 'https://rickandmortyapi.com/graphql',
+  // uri: 'https://rickandmortyapi.com/graphql',
+  uri: 'https://rick-and-morty-graphql-mo.vercel.app/',
   cache: new InMemoryCache(),
 });
 
