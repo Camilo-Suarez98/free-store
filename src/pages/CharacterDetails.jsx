@@ -39,7 +39,6 @@ const CharacterDetails = () => {
   if (loading) return <Loader />;
 
   if (error) return <p>Error : {error.message}</p>;
-  console.log({ data });
 
   return (
     <div>

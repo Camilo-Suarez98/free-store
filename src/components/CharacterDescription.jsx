@@ -5,5 +5,4 @@ const CharacterDescription = ({ title, value }) => {
     </p>
   );
 };
-
 export default CharacterDescription;
