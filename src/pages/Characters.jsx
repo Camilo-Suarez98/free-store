@@ -1,28 +1,10 @@
-import { useQuery, gql } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Loader from '../components/Loader';
 import Button from '../components/Button';
 import TitleComponent from '../components/TitleComponent';
-
-const GET_CHARACTERS = gql`
-  query getCharaters($page: Int!) {
-    characters(page: $page) {
-      info {
-        pages
-        next
-        prev
-      }
-      results {
-        id
-        name
-        status
-        image
-        gender
-      }
-    }
-  }
-`;
+import { GET_CHARACTERS } from '../utils/querys';
 
 const Characters = () => {
   const [pageNum, setPageNum] = useState(1);

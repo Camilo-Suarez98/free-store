@@ -1,31 +1,8 @@
-import { useQuery, gql } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import { useParams } from "react-router-dom";
 import Loader from "../components/Loader";
 import CharacterDescription from '../components/CharacterDescription';
-
-const GET_CHARACTER = gql`
-  query getCharater($id: ID!) {
-    character(id: $id) {
-      id
-      name
-      image
-      status
-      species
-      origin {
-        name
-      }
-      location {
-        name
-      }
-      episode {
-        id
-        name
-        air_date
-        episode
-      }
-    }
-  }
-`;
+import { GET_CHARACTER } from "../utils/querys";
 
 const CharacterDetails = () => {
   const { id } = useParams();
@@ -66,7 +43,7 @@ const CharacterDetails = () => {
             <h3 className="text-3xl my-6 text-[#53bf23]">Episodes and air date</h3>
             <ol className="list-decimal">
               {data.character.episode.map(({ id, name, air_date, episode }) => (
-                <li key={id}>{episode}: {name} - {air_date}</li>
+                <li key={id}>{episode}: <span className="text-[#53bf23]">{name}</span> - {air_date}</li>
               ))}
             </ol>
           </div>
