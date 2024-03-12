@@ -3,34 +3,27 @@ import { useParams } from "react-router-dom";
 import Loader from "../components/Loader";
 import CharacterDescription from '../components/CharacterDescription';
 import { GET_CHARACTER } from "../utils/querys";
+import TitleComponent from "../components/TitleComponent";
 
 const CharacterDetails = () => {
   const { id } = useParams();
 
-  const options = {
+  const { loading, error, data } = useQuery(GET_CHARACTER, {
     variables: { id }
-  };
-
-  const { loading, error, data } = useQuery(GET_CHARACTER, options);
+  });
 
   if (loading) return <Loader />;
-
   if (error) return <p>Error : {error.message}</p>;
 
   return (
     <div>
       {
         data && (
-          <div
-            className="flex flex-col items-center"
-          >
-            <h2
-              className="text-3xl text-[#53bf23] my-6 sm:text-4xl md:text-5xl min-[991px]:text-6xl"
-            >
-              {data.character.name}
-            </h2>
+          <div className="flex flex-col items-center">
+            <TitleComponent value={data.character.name} />
+
             <img
-              className="rounded-3xl my-5"
+              className="rounded-3xl my-10"
               src={data.character.image}
               alt={data.character.name}
             />

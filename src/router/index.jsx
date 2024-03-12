@@ -5,6 +5,7 @@ import Root from "../Layout/Root";
 import CharacterDetails from "../pages/CharacterDetails";
 import Locations from "../pages/Locations";
 import Episodes from "../pages/Episodes";
+import EpisodeDetails from "../pages/EpisodeDetails";
 
 const router = createBrowserRouter([
   {
@@ -24,12 +25,16 @@ const router = createBrowserRouter([
         element: <CharacterDetails />
       },
       {
-        path: '/locations',
-        element: <Locations />
-      },
-      {
         path: '/episodes',
         element: <Episodes />
+      },
+      {
+        path: '/episode/:id',
+        element: <EpisodeDetails />
+      },
+      {
+        path: '/locations',
+        element: <Locations />
       },
     ]
   }

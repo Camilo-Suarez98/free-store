@@ -14,14 +14,13 @@ const Characters = () => {
   });
 
   if (loading) return <Loader />;
-
   if (error) return <p>Error : {error.message}</p>;
 
   const showMoreCharacters = () => {
     if (data.characters.info.next) {
       setPageNum(pageNum + 1);
       fetchMore({
-        variables: { page: pageNum + 1 }
+        variables: { page: pageNum }
       })
     }
   };
@@ -30,7 +29,7 @@ const Characters = () => {
     if (data.characters.info.prev) {
       setPageNum(pageNum - 1);
       fetchMore({
-        variables: { page: pageNum - 1 }
+        variables: { page: pageNum }
       })
     }
   };
