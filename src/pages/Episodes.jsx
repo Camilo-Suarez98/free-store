@@ -19,10 +19,10 @@ const Episodes = () => {
   return (
     <div>
       <TitleComponent value="Episodes" />
-      <div className="grid mt-6 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 mt-6 gap-10 sm:grid-cols-2 lg:grid-cols-3">
         {data.episodes.results.map(({ id, name, air_date, episode }) => (
           <a
-            className="border-2 border-[#3c6a28] text-[#53bf23] w-1/2 cursor-pointer p-4 rounded-lg transition duration-1000 hover:bg-[#abfa88] hover:text-[#53bf23] hover:text-bold min-[320px]:w-8/12 min-[520px]:w-full"
+            className="border-2 border-[#3c6a28] text-[#53bf23] w-8/12 m-auto cursor-pointer p-4 rounded-lg transition duration-1000 hover:bg-[#abfa88] hover:text-[#53bf23] hover:text-bold min-[320px]:w-8/12 min-[520px]:w-full"
             key={id}
           >
             <p className='text-xl my-2 text-white'>{episode}</p>
