@@ -1,6 +1,10 @@
+import TitleComponent from "../components/TitleComponent";
+
 const Episodes = () => {
   return (
-    <div>Episodes</div>
+    <div>
+      <TitleComponent value="Episodes" />
+    </div>
   );
 };
 

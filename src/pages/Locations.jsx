@@ -1,6 +1,10 @@
+import TitleComponent from "../components/TitleComponent";
+
 const Locations = () => {
   return (
-    <div>Locations</div>
+    <div>
+      <TitleComponent value="Locations" />
+    </div>
   );
 };
 

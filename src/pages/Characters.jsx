@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Loader from '../components/Loader';
 import Button from '../components/Button';
+import TitleComponent from '../components/TitleComponent';
 
 const GET_CHARACTERS = gql`
   query getCharaters($page: Int!) {
@@ -54,7 +55,8 @@ const Characters = () => {
 
   return (
     <div>
-      <h2 className='text-2xl'>Click on your favorite character to view details</h2>
+      <TitleComponent value="Characters" />
+      <h2 className='text-2xl mt-6'>Click on your favorite character to view details</h2>
       <div className='flex flex-wrap justify-center gap-10 mt-10'>
         {data.characters.results.map(({ id, name, status, image, gender }) => {
           return (
