@@ -75,3 +75,26 @@ export const GET_EPISODE = gql`
     }
   }
 `;
+
+export const GET_LOCATIONS = gql`
+  query getLocations($page: Int!) {
+    locations(page: $page) {
+      info {
+        pages
+        next
+        prev
+      }
+      results {
+        id
+        name
+        type
+        dimension
+        residents {
+          id
+          name
+          image
+        }
+      }
+    }
+  }
+`;

@@ -32,7 +32,7 @@ const EpisodeDetails = () => {
                   key={character.id}
                   to={`/character/${character.id}`}
                 >
-                  <CharacterDescription title="Name" value={character.name} />
+                  <p className="text-[#53bf23] text-2xl">{character.name}</p>
                   <img
                     className="my-6"
                     src={character.image}
