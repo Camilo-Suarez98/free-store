@@ -4,6 +4,7 @@ import Loader from "../components/Loader";
 import CharacterDescription from '../components/CharacterDescription';
 import { GET_CHARACTER } from "../utils/querys";
 import TitleComponent from "../components/TitleComponent";
+import NavInDetails from "../components/NavInDetails";
 
 const CharacterDetails = () => {
   const { id } = useParams();
@@ -35,8 +36,12 @@ const CharacterDetails = () => {
 
             <h3 className="text-3xl my-6 text-[#53bf23]">Episodes and air date</h3>
             <ol className="list-decimal">
-              {data.character.episode.map(({ id, name, air_date, episode }) => (
-                <li key={id}>{episode}: <span className="text-[#53bf23]">{name}</span> - {air_date}</li>
+              {data.character.episode.map(({ id, name, episode }) => (
+                <li key={id} className="my-12">
+                  <NavInDetails to={`/episode/${id}`}>
+                    {episode}: <span className="text-[#53bf23]">{name}</span>
+                  </NavInDetails>
+                </li>
               ))}
             </ol>
           </div>

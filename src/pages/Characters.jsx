@@ -1,9 +1,9 @@
 import { useQuery } from '@apollo/client';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import Loader from '../components/Loader';
 import Button from '../components/Button';
 import TitleComponent from '../components/TitleComponent';
+import NavInDetails from '../components/NavInDetails';
 import { GET_CHARACTERS } from '../utils/querys';
 
 const Characters = () => {
@@ -41,10 +41,9 @@ const Characters = () => {
       <div className='flex flex-wrap justify-center gap-10 mt-10'>
         {data.characters.results.map(({ id, name, status, image, gender }) => {
           return (
-            <Link
+            <NavInDetails
               to={`/character/${id}`}
               key={id}
-              className='border-2 border-[#3c6a28] text-[#53bf23] cursor-pointer p-4 rounded-lg transition duration-1000 hover:bg-[#abfa88] hover:text-white hover:text-bold'
             >
               <h2 className='text-2xl my-2 overflow-hidden text-ellipsis whitespace-nowrap'>{name}</h2>
               <h3 className={status === 'Alive' ? 'text-green-500 text-xl' : status === 'unknown' ? 'text-gray-500 text-2xl' : 'text-red-500 text-2xl'}>{status}</h3>
@@ -54,7 +53,7 @@ const Characters = () => {
                 alt={name}
                 className='rounded-lg'
               />
-            </Link>
+            </NavInDetails>
           )
         })}
       </div>
