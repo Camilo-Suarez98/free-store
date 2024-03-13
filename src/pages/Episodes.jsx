@@ -51,11 +51,13 @@ const Episodes = () => {
           value="Shore less"
           margin='mr-3'
           onClick={showLessChapters}
+          disabled={!data.episodes.info.prev}
         />
         <Button
           value="Show more"
           margin='ml-3'
           onClick={showMoreChapters}
+          disabled={!data.episodes.info.next}
         />
       </div>
     </div>

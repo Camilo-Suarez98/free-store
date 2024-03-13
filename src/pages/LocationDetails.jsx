@@ -1,32 +1,34 @@
 import { useQuery } from "@apollo/client";
-import { GET_EPISODE } from "../utils/querys";
+import { GET_LOCATION } from "../utils/querys";
 import { useParams } from "react-router-dom";
 import Loader from "../components/Loader";
 import TitleComponent from "../components/TitleComponent";
 import CharacterDescription from "../components/CharacterDescription";
 import NavInDetails from "../components/NavInDetails";
 
-const EpisodeDetails = () => {
+const LocationDetails = () => {
   const { id } = useParams();
 
-  const { loading, error, data } = useQuery(GET_EPISODE, {
+  const { loading, error, data } = useQuery(GET_LOCATION, {
     variables: { id }
   });
 
   if (loading) return <Loader />;
-  if (error) return `Error: ${error.message}`;
+  if (error) return `Error: ${error.message}`
+
+  console.log({ data });
 
   return (
     <div>
       {data &&
         <>
-          <TitleComponent value={data.episode.name} />
+          <TitleComponent value={data.location.name} />
           <div className="flex flex-col items-center mt-10">
-            <CharacterDescription title="Chapter" value={data.episode.episode} />
-            <CharacterDescription title="Air Date" value={data.episode.air_date} />
-            <p className="mt-6 text-[#53bf23] text-2xl">Characters in this episode:</p>
+            <CharacterDescription title="Type" value={data.location.type} />
+            <CharacterDescription title="Dimension" value={data.location.dimension} />
+            <p className="mt-6 text-[#53bf23] text-2xl">Residents in this location:</p>
             <div className="flex flex-wrap justify-center gap-10 mt-10">
-              {data.episode.characters.map(({ id, name, image }) => (
+              {data.location.residents.map(({ id, name, image }) => (
                 <NavInDetails
                   key={id}
                   to={`/character/${id}`}
@@ -47,4 +49,4 @@ const EpisodeDetails = () => {
   );
 };
 
-export default EpisodeDetails;
+export default LocationDetails;

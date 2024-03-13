@@ -6,6 +6,7 @@ import CharacterDetails from "../pages/CharacterDetails";
 import Locations from "../pages/Locations";
 import Episodes from "../pages/Episodes";
 import EpisodeDetails from "../pages/EpisodeDetails";
+import LocationDetails from "../pages/LocationDetails";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: '/locations',
         element: <Locations />
+      },
+      {
+        path: '/location/:id',
+        element: <LocationDetails />
       },
     ]
   }
