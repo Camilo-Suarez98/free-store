@@ -34,16 +34,19 @@ const CharacterDetails = () => {
             <CharacterDescription title="Origin" value={data.character.origin.name} />
             <CharacterDescription title="Location" value={data.character.location.name} />
 
-            <h3 className="text-3xl my-6 text-[#53bf23]">Episodes and air date</h3>
-            <ol className="list-decimal">
+            <h3 className="text-3xl my-6 text-[#53bf23]">Episodes</h3>
+            <div className="grid grid-cols-1 mt-6 gap-10 sm:grid-cols-2 lg:grid-cols-3">
               {data.character.episode.map(({ id, name, episode }) => (
-                <li key={id} className="my-12">
-                  <NavInDetails to={`/episode/${id}`}>
+                <NavInDetails
+                  key={id}
+                  to={`/episode/${id}`}
+                >
+                  <p className="text-[#53bf23] text-2xl">
                     {episode}: <span className="text-[#53bf23]">{name}</span>
-                  </NavInDetails>
-                </li>
+                  </p>
+                </NavInDetails>
               ))}
-            </ol>
+            </div>
           </div>
         )
       }

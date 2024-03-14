@@ -37,7 +37,7 @@ const Characters = () => {
   return (
     <div>
       <TitleComponent value="Characters" />
-      <h2 className='text-2xl mt-6'>Click on your favorite character to view details</h2>
+      <h2 className='text-2xl mt-6'>Click on any character to view details</h2>
       <div className='flex flex-wrap justify-center gap-10 mt-10'>
         {data.characters.results.map(({ id, name, status, image, gender }) => {
           return (

@@ -16,8 +16,6 @@ const LocationDetails = () => {
   if (loading) return <Loader />;
   if (error) return `Error: ${error.message}`
 
-  console.log({ data });
-
   return (
     <div>
       {data &&
