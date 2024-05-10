@@ -23,14 +23,14 @@ The things you will need to install the software are a computer that isn't too o
 git clone git@github.com:Camilo-Suarez98/rick-and-morty-graphql
 ```
 
-2. Change directory to /elemental-frontend:
+2. Change directory to /rick-and-morty-graphql:
 ```
 cd rick-and-morty-graphql
 ```
 
 3. Install the frontend and backend dependencies:
 
-Make sure to have installed Node.js:
+Make sure you have Node.js installed:
 ```
 sudo apt install nodejs npm
 ```
@@ -50,11 +50,11 @@ Make sure to be in each repository:
 ```
 cd rick-and-morty-graphql
 ```
+
 Once there, execute
 ```
 npm run dev
 ```
-For the backend, execute the same commands. Remember to keep both running!
 
 ## Built with 🛠️
 
