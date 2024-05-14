@@ -56,7 +56,7 @@ Once there, execute
 npm run dev
 ```
 
-## Built with 🛠️
+## Built with 🛠️:
 
 - React: [https://react.dev/](https://react.dev/)
 - Vite: [https://vitejs.dev/](https://vitejs.dev/)
