@@ -6,7 +6,7 @@ const Home = () => {
     <div className="text-center p-0">
       <TitleComponent value="Explore the Rick and Morty Universe" />
       <h3 className="text-2xl mt-4 sm:mt-8 md:text-4xl">This app is an esential tool to all fans of this great series, it can display great content about Rick and Morty, including:</h3>
-      <ul className="my-6 sm:my-10">
+      <ul className="my-6 sm:my-2">
         <Paragraph
           title="Characters"
           text="A complete gallery of characters from the series. You can get a detailed information"

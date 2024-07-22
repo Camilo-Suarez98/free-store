@@ -1,16 +1,17 @@
 import '../App.css';
 import { Outlet } from 'react-router-dom';
 import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 const Root = () => {
   return (
-    <div className='w-full h-full relative p-4'>
-      <Header />
-      <div className='mt-4'>
-        <Outlet />
+    <div className='w-full h-full relative px-4'>
+      <div className="background-wrapper"></div>
+      <div className="content">
+        <Header />
+        <div className='mt-4'>
+          <Outlet />
+        </div>
       </div>
-      <Footer />
     </div>
   );
 };

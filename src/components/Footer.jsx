@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="mt-16 w-full text-center absolute text-sm sm:text-xl">
+    <div className="w-full text-center absolute text-sm sm:text-xl">
       <h2>
         Developed by
         {' '}
